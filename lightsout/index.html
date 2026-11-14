@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11111f">
+  <title>Lights Out</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="game.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <div class="topbar">
+      <a class="brand" href="#" aria-label="Lights Out">
+        <!-- <span class="brand-mark" aria-hidden="true">✦</span>
+        <span>Lights<span class="brand-light">Out</span></span> -->
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span>Caccia al <span class="brand-light">tesoro</span></span>
+      </a>
+      <!-- <span class="level-pill" id="levelLabel">LIVELLO 1</span> -->
+    </div>
+
+    <!-- <p class="eyebrow"><span aria-hidden="true">●</span> PUZZLE DI LOGICA</p> -->
+    <h1>All'arrembaggio</h1>
+    <p class="intro">Mostra tutti i teschi. Ogni tocco cambia anche le caselle vicine!</p>
+
+    <section class="card" aria-label="Gioco Lights Out">
+      <div class="stats">
+        <div><span class="stat-label">MOSSE</span><strong id="moves">0</strong></div>
+        <div><span class="stat-label">TESCHI MANCANTI</span><strong id="lights">0</strong></div>
+        <div><span class="stat-label">RECORD</span><strong id="best">—</strong></div>
+      </div>
+
+      <div class="progress-track" aria-label="Teschi mancanti">
+        <div class="progress-fill" id="progress"></div>
+      </div>
+
+      <div class="board-wrap">
+        <div class="board" id="board" role="group" aria-label="Griglia di gioco"></div>
+      </div>
+
+      <p class="feedback" id="feedback" role="status" aria-live="polite"></p>
+
+      <div class="actions">
+        <button class="secondary" id="restartBtn" type="button">Ricomincia</button>
+        <button id="newGameBtn" type="button">Nuova partita</button>
+      </div>
+      <p class="hint" id="hint"></p>
+    </section>
+    <!-- <p class="footer-note">Un piccolo rompicapo per allenare la mente ✨</p> -->
+  </main>
+</body>
+</html>

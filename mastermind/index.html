@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#171322">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>Mastermind</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <!-- <header>
+      <p class="eyebrow">LOGICA · DEDUZIONE</p>
+      <h1>Mastermind</h1>
+      <p class="subtitle">Indovina il codice segreto prima di esaurire i tentativi.</p>
+    </header> -->
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Mastermind">
+<!--         <span class="brand-mark">❋</span>
+        <span>man<span class="brand-light">fry</span></span> -->
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span>Caccia al <span class="brand-light">tesoro</span></span>
+      </a>
+      <div class="break"></div>
+      <h1>Mastermind</h1>
+    </header>
+    
+    <section class="status">
+      <div><span class="status-label">Tentativi rimasti</span><strong id="remaining">10</strong></div>
+      <!-- <div><span class="status-label">Codice</span><strong>4 colori</strong></div> -->
+       <div class="status-info">
+      <ul>
+        <li><b class="black-dot"></b> colore giusto - posizione giusta</li>
+        <li><b class="white-dot"></b> colore giusto - posizione sbagliata</li>
+      </ul>
+      </div>
+    </section>
+
+    <section class="board-wrap" aria-label="Tabellone di gioco">
+      <div id="board" class="board"></div>
+    </section>
+
+    <section class="controls">
+      <div class="current-title">
+        <span>La tua combinazione</span>
+        <small id="selection-count">0 / 4 selezionati</small>
+      </div>
+      <div id="current-code" class="current-code" aria-label="Combinazione corrente"></div>
+      <div class="palette-title">Scegli un colore e tocca una posizione</div>
+      <div id="palette" class="palette" aria-label="Palette colori"></div>
+      <div class="actions">
+        <button id="clear" class="secondary">Azzera</button>
+        <button id="submit" class="primary" disabled>Conferma tentativo</button>
+      </div>
+      <p id="message" class="message" aria-live="polite">Seleziona i 4 colori della combinazione.</p>
+      <button id="new-game" class="new-game">Nuova partita</button>
+    </section>
+
+    <details class="rules">
+      <summary>Come si gioca</summary>
+      <p>Il codice segreto è composto da 4 colori scelti tra i 6 disponibili. I colori possono ripetersi.</p>
+      <p>Dopo ogni tentativo riceverai degli indizi:</p>
+      <ul>
+        <li><b class="black-dot"></b> colore giusto nella posizione giusta;</li>
+        <li><b class="white-dot"></b> colore giusto ma nella posizione sbagliata.</li>
+      </ul>
+      <p>Gli indizi non indicano a quali posizioni si riferiscono. Hai 10 tentativi per trovare il codice.</p>
+    </details>
+    <!-- <footer>MASTER MIND <span>•</span> PUZZLE DI LOGICA</footer> -->
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>

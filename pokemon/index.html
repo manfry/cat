@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17172b">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>PokéQuiz - Cattura i Pokémon</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="app">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Gioco del 15, pagina iniziale">
+<!--         <span class="brand-mark">❋</span>
+        <span>man<span class="brand-light">fry</span></span> -->
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span>Caccia al <span class="brand-light">tesoro</span></span>
+      </a>
+    </header>
+    <h1>Catturali tutti!</h1>
+    <section class="card" aria-label="Quiz Pokémon">
+      <div class="progress-row">
+        <span id="counter">Pokémon 1 di 5</span>
+        <span id="percent">20%</span>
+      </div>
+      <div class="progress-track" role="progressbar" aria-label="Avanzamento" aria-valuemin="0" aria-valuemax="5"
+        aria-valuenow="1" id="progress">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <form id="answerForm">
+        <label for="pokemonName">Scrivi il nome del Pokémon</label>
+        <div class="answer-row">
+          <input id="pokemonName" name="pokemonName" type="text" placeholder="Es. Pikachu" autocomplete="off"
+            autocapitalize="none" spellcheck="false" required>
+          <button type="submit">Verifica</button>
+        </div>
+        <p id="feedback" class="feedback" role="status" aria-live="polite"></p>
+      </form>
+      <div class="image-frame">
+        <img id="pokemonImage" src="images/197.png" alt="Immagine del Pokémon da indovinare">
+      </div>
+    </section>
+    <p class="hint">Suggerimento: non importa se usi maiuscole o minuscole.</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
