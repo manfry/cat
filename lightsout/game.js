@@ -109,7 +109,7 @@
       finishGame();
     } else {
       setFeedback('Bene! Continua: mostra tutti i teschi.');
-      if ( enigmaVisible == false && moves >= 5 ){
+      if ( enigmaVisible == false && moves >= 50 ){
         showGiveUp();
       }
     }
