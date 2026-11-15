@@ -15,7 +15,8 @@ const RISPOSTE_CORRETTE = [
   { parola: "allarrembaggio", link: "lightsout/index.html" },
   { parola: "all'arrembaggio", link: "lightsout/index.html" },
   { parola: "infinito", link: "mastermind/index.html" },
-  { parola: "dell'infinito", link: "mastermind/index.html" }
+  { parola: "dell'infinito", link: "mastermind/index.html" },
+  { parola: "polisucco", link: "hp/index.html" }
  ]; 
 /* const RISPOSTE_CORRETTE = [
   { parola: "cG9rZW1vbg==", link: "cG9rZW1vbi9pbmRleC5odG1s" }, // Po
